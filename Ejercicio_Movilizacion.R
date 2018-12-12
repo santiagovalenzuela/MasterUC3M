@@ -6,7 +6,7 @@ library(rms)
 library(MASS)
 library(lmtest)
 
-setwd("C:/Users/Santiago/Desktop/Master/Protesta y nuevas formas de participacion/Ejercicio1")
+setwd("")
 
 cis3126 <- read_dta("DA3126_v12.dta")
 
