@@ -1,4 +1,5 @@
 #AGENDA DE MOVILIZACION
+#Por Ruben Josue Garcia y Santiago Valenzuela
 
 library(haven)
 library(margins)
@@ -137,8 +138,9 @@ logit.het
 #Calculamos efectos marginales
 margins_manifest <- margins(mod.manifest)
 summary(margins_manifest)
-write.csv(summary(margins_manifest),file="marginales_manifestacion.csv", row.names=F)
+write.csv(summary(margins_manifest),file="marginales_manifestacion.csv", row.names=F)#Exportamos a csv
 
+#Creamos gráfica
 plot(margins_manifest, main="Gráfica 1- Efectos marginales sobre manifestacion",
      pch=15, las=2, labels=c("Edad","Estudios Superiores","Género","Uso de redes"))
 
@@ -164,6 +166,7 @@ margins_asoc <- margins(mod.asoc)
 summary(margins_asoc)
 write.csv(summary(margins_asoc),file="marginales_asociacion.csv", row.names=F) #Exportamos a csv
 
+#Creamos gráfica
 plot(margins_asoc, main="Gráfica 2- Efectos marginales sobre asociación",
      pch=15, las=2, labels=c("Edad","Estudios Superiores","Género","Uso de redes"))
 
